@@ -28,6 +28,5 @@ jobs:
       with:
         context: .
         push: true
-        dockerfile: ./docker/Dockerfile.user
-        # This now uses the input from the manual trigger
+        file: ./docker/Dockerfile.user
         tags: ghcr.io/${{ github.repository }}:${{ github.event.inputs.tag }}
